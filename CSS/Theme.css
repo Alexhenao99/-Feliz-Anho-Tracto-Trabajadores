@@ -1,0 +1,186 @@
+body {font-family:'Roboto Slab',Arial,Helvetica,sans-serif;}
+
+h1 {font-size:39px;padding:0 0 20px;color:#de0603;-webkit-text-shadow:0 1px 0 #ccc;-moz-text-shadow:0 1px 0 #ccc;text-shadow:0 1px 0 #ccc;}
+h2 {font-size:26px;padding:0 0 25px;line-height:1.42;-webkit-text-shadow:0 1px 0 #ccc;-moz-text-shadow:0 1px 0 #ccc;text-shadow:0 1px 0 #ccc;}
+h3 {font-size:16px;padding:0 0 20px;-webkit-text-shadow:0 1px 0 #ccc;-moz-text-shadow:0 1px 0 #ccc;text-shadow:0 1px 0 #ccc;}
+
+.tree 		{float:left;width:525px;margin:25px 0;max-width:100%;}
+.row 		{float:left;width:100%;text-align:center;margin-bottom:-20px;}
+.row:first-child {margin-bottom:-5px;}
+.star		{display:inline-block;background:url(../images/bgr/star.png) 50% 0 no-repeat;width:94px;height:90px;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;-ms-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
+.star:hover {-webkit-transform:rotate(145deg);-moz-transform:rotate(145deg);-o-transform:rotate(145deg);-ms-transform:rotate(145deg);transform:rotate(145deg);}
+.ball 		{display:inline-block;background:url(../images/bgr/ball.png) 50% 0 no-repeat;width:102px;height:117px;background-size:contain;}
+.ball a 		{float:left;display:block;width:92px;height:92px;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;margin:18px 0 0 3px;position:relative;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;-ms-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
+.ball img 	{opacity:0;-webkit-border-radius:46px;-moz-border-radius:46px;border-radius:46px;border:2px solid #fff;background:#fff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;-ms-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
+.ball a:hover img,
+.open img{opacity:1;}
+
+.greeting {float:right;width:516px;margin:123px 40px 0 0;max-width:100%;}
+
+.contact 				{display:none;position:absolute;top:0;left:0;z-index:999;width:100%;height:100%;}
+.snow					{display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:900;background-color:#eee;background-color:rgba(204, 204, 204, 0.3);background-image: url(../images/bgr/snowflake1.png), url(../images/bgr/snowflake2.png), url(../images/bgr/snowflake3.png);-webkit-animation: snow 20s linear infinite;-moz-animation: snow 20s linear infinite;-o-animation: snow 20s linear infinite;-ms-animation: snow 20s linear infinite;animation: snow 20s linear infinite;}
+.contact  .wrap 	{width:40%;margin:30px auto;background:#fff;padding:25px 40px;border:1px solid #eee;-webkit-box-shadow:0 0 5px rgba(0,0,0,.1);-moz-box-shadow:0 0 5px rgba(0,0,0,.1);box-shadow:0 0 5px rgba(0,0,0,.1);}
+
+.trees {padding-bottom:20px !important;}
+
+@media screen and (max-width: 1200px) {
+.tree 		{width:60%;}
+.greeting 	{width:40%;margin-right:0;}
+}
+
+@media screen and (max-width: 980px) {
+.tree 		{width:100%;float:left;}
+.greeting 	{width:100%;float:left;text-align:center;margin-top:20px;}
+}
+
+@media screen and (min-width: 960px) {
+.tree		{-webkit-animation: tree 1.8s linear forwards; -moz-animation: tree 1.8s linear forwards; -o-animation: tree 1.8s linear forwards;-ms-animation: tree 1.8s linear forwards; animation:tree 1.8s linear forwards;-webkit-backface-visibility: hidden; -moz-backface-visibility:hidden;-ms-backface-visibility:hidden;}
+.greeting 	{-webkit-animation: greeting 1.8s linear forwards; -moz-animation: greeting 1.8s linear forwards; -o-animation: greeting 1.8s linear forwards;-ms-animation: greeting 1.8s linear forwards; animation:greeting 1.8s linear forwards;-webkit-backface-visibility: hidden; -moz-backface-visibility:hidden;-ms-backface-visibility:hidden;}
+}
+
+@media screen and (max-width: 650px) {
+.ball 	{width:70px;height:81px;}
+.ball a 	{width:63px;height:63px;margin:13px 0 0 2px;}
+}
+
+@media screen and (max-width: 480px) {
+.row	{margin-bottom:-10px;}
+.ball 	{width:50px;height:58px;}
+.ball a 	{width:46px;height:46px;margin:9px 0 0 1px;}
+}
+
+@media screen and (max-width: 320px) {
+.tree {display:none;}
+h1 {font-size:29px;}
+h2 {font-size:20px;}
+h3 {font-size:16px;}
+}
+
+/*ANIMATIONS*/
+@-webkit-keyframes greeting {
+	0% 		{opacity: 0;-webkit-transform: translateX(2000px);}
+	100% 	{opacity: 1;-webkit-transform: translateX(0);}
+}
+
+@-moz-keyframes greeting {
+	0% 		{opacity: 0;-moz-transform: translateX(2000px);}
+	100% 	{opacity: 1;-moz-transform: translateX(0);}
+}
+
+@-o-keyframes greeting {
+	0% 		{opacity: 0;-o-transform: translateX(2000px);}
+	100% 	{opacity: 1;-o-transform: translateX(0);}
+}
+
+@-ms-keyframes greeting {
+	0%	 	{opacity: 0;-ms-transform: translateX(2000px);}
+	100% 	{opacity: 1;-ms-transform: translateX(0);}
+}
+
+@keyframes greeting {
+	0%	 	{opacity: 0;transform: translateX(2000px);}
+	100% 	{opacity: 1;transform: translateX(0);}
+}
+
+@-webkit-keyframes tree {
+	0% 		{opacity: 0;-webkit-transform: translateY(2000px);}
+	100% 	{opacity: 1;-webkit-transform: translateY(0);}
+}
+
+@-moz-keyframes tree {
+	0% 		{opacity: 0;-moz-transform: translateY(2000px);}
+	100% 	{opacity: 1;-moz-transform: translateY(0);}
+}
+
+@-o-keyframes tree {
+	0% 		{opacity: 0;-o-transform: translateY(2000px);}
+	100% 	{opacity: 1;-o-transform: translateY(0);}
+}
+
+@-ms-keyframes tree {
+	0%	 	{opacity: 0;-ms-transform: translateY(2000px);}
+	100% 	{opacity: 1;-ms-transform: translateY(0);}
+}
+
+@keyframes tree {
+	0%	 	{opacity: 0;transform: translateY(2000px);}
+	100% 	{opacity: 1;transform: translateY(0);}
+}
+
+
+
+footer.foot.trees {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+
+
+.ribbon .main-nav li a.playIcon {
+    background: #fff;
+    color: #505050;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    padding: 0;
+    float: none;
+    text-shadow: none;
+    margin-left: 20px;
+}
+
+.ribbon .main-nav {
+    float: right;
+}
+
+@media (max-height: 1000px) {
+	footer.foot.trees {
+		position: initial;
+		padding-bottom: 0 !important;
+	}
+
+}
+
+
+@media (max-width: 800px) {
+	footer.foot.trees {
+		position: initial;
+		padding-bottom: 0 !important;
+	}
+	.foot nav{
+		margin-top: 20px;
+	}
+	.foot .main-nav li{
+		padding: 0;
+	}
+
+
+.head .main-nav {
+    width: 80px;
+    background: #fff;
+    text-align: center;
+    height: 80px;
+    position: absolute;
+    right: 0;
+}
+
+.head .main-nav li a.playIcon {
+	background: #c62828 !important;
+	color: #fff !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+}
+
+
+
+}
+
+
+
+
